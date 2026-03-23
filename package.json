@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "sanity": "sanity",
-    "sanity:mcp": "sanity mcp configure"
+    "sanity:mcp": "sanity mcp configure",
+    "sanity:sync": "node scripts/sync-landing-to-sanity.mjs"
   },
   "dependencies": {
     "@sanity/vision": "^5.17.1",
