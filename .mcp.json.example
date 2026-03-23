@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "sanity": {
+      "command": "npx",
+      "args": ["-y", "sanity@latest", "mcp", "start"]
+    }
+  }
+}
