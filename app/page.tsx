@@ -111,7 +111,6 @@ export default async function Home() {
             ))}
           </div>
         </section>
-
         <section id="process" className="space-y-4 sm:space-y-5 md:space-y-6">
           <h2 className="text-2xl font-black tracking-tight sm:text-3xl">Як Це Працює</h2>
           <div className="grid gap-3 sm:gap-4 md:grid-cols-4">
