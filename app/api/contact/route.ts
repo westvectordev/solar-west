@@ -6,6 +6,8 @@ type ContactPayload = {
   email?: string;
   phone?: string;
   details?: string;
+  location?: string;
+  power?: string;
 };
 
 function normalize(input: unknown): string {
@@ -24,6 +26,8 @@ export async function POST(request: Request) {
     const email = normalize(payload.email);
     const phone = normalize(payload.phone);
     const details = normalize(payload.details);
+    const location = normalize(payload.location);
+    const power = normalize(payload.power);
 
     if (!name || !email || !details) {
       return NextResponse.json(
@@ -35,6 +39,7 @@ export async function POST(request: Request) {
     const gmailUser = getEnv('GMAIL_USER');
     const gmailAppPassword = getEnv('GMAIL_APP_PASSWORD');
     const contactTo = getEnv('CONTACT_TO') || gmailUser;
+    console.log(gmailUser, gmailAppPassword, contactTo);
 
     if (!gmailUser || !gmailAppPassword || !contactTo) {
       return NextResponse.json(
@@ -63,6 +68,8 @@ export async function POST(request: Request) {
         `Ім'я: ${name}`,
         `Email: ${email}`,
         `Телефон: ${phone || 'Не вказано'}`,
+        `Локація: ${location || 'Не вказано'}`,
+        `Потужність: ${power || 'Не вказано'}`,
         '',
         'Деталі проєкту:',
         details,
@@ -72,6 +79,8 @@ export async function POST(request: Request) {
         <p><strong>Ім'я:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Телефон:</strong> ${phone || 'Не вказано'}</p>
+        <p><strong>Локація:</strong> ${location || 'Не вказано'}</p>
+        <p><strong>Потужність:</strong> ${power || 'Не вказано'}</p>
         <p><strong>Деталі проєкту:</strong></p>
         <p>${details.replace(/\n/g, '<br/>')}</p>
       `,

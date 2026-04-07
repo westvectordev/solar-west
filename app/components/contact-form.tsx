@@ -18,6 +18,8 @@ export default function ContactForm() {
       email: String(formData.get('email') ?? '').trim(),
       phone: String(formData.get('phone') ?? '').trim(),
       details: String(formData.get('details') ?? '').trim(),
+      location: String(formData.get('location') ?? '').trim(),
+      power: String(formData.get('power') ?? '').trim(),
     };
 
     setStatus('loading');
@@ -96,6 +98,28 @@ export default function ContactForm() {
           placeholder="Розкажіть про ваш об’єкт, поточні рахунки та цілі."
         />
       </label>
+
+      <div className="grid gap-3 sm:gap-4 md:grid-cols-2">
+        <label className="grid gap-1.5 text-xs sm:gap-2 sm:text-sm font-medium text-slate-100">
+          Локація
+          <input
+            name="location"
+            type="text"
+            className="rounded-xl border border-white/30 bg-white/10 px-3 py-2.5 sm:px-4 sm:py-3 text-white placeholder:text-white/70 focus:border-amber-300 focus:outline-none"
+            placeholder="Київ, Київська область"
+          />
+        </label>
+
+        <label className="grid gap-1.5 text-xs sm:gap-2 sm:text-sm font-medium text-slate-100">
+          Потужність
+          <input
+            name="power"
+            type="text"
+            className="rounded-xl border border-white/30 bg-white/10 px-3 py-2.5 sm:px-4 sm:py-3 text-white placeholder:text-white/70 focus:border-amber-300 focus:outline-none"
+            placeholder="10 кВт"
+          />
+        </label>
+      </div>
 
       <div className="flex flex-col gap-2.5 sm:gap-3 sm:flex-row sm:items-center sm:justify-between">
         <button

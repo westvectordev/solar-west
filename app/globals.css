@@ -21,6 +21,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -59,4 +63,18 @@ body {
 .hero-swiper .swiper-pagination-bullet-active {
   background: #047857;
   opacity: 1;
+}
+
+/* Works gallery sliders */
+.works-slider .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.works-slider .swiper-pagination-bullet-active {
+  background: #ffffff;
+  width: 16px;
+  border-radius: 9999px;
 }

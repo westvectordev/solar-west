@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="sky4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fdba74"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#sky4)"/>
+  <rect x="0" y="360" width="800" height="140" fill="#bbf7d0" rx="0"/>
+  <rect x="150" y="230" width="500" height="150" fill="#f1f5f9" rx="6"/>
+  <rect x="150" y="210" width="250" height="20" fill="#475569" rx="2"/>
+  <rect x="400" y="195" width="250" height="35" fill="#475569" rx="2"/>
+  <g fill="#1e3a5f" opacity="0.55">
+    <rect x="160" y="240" width="45" height="30" rx="2"/>
+    <rect x="215" y="240" width="45" height="30" rx="2"/>
+    <rect x="270" y="240" width="45" height="30" rx="2"/>
+    <rect x="325" y="240" width="45" height="30" rx="2"/>
+    <rect x="380" y="240" width="45" height="30" rx="2"/>
+    <rect x="435" y="240" width="45" height="30" rx="2"/>
+    <rect x="490" y="240" width="45" height="30" rx="2"/>
+    <rect x="545" y="240" width="45" height="30" rx="2"/>
+    <rect x="600" y="240" width="40" height="30" rx="2"/>
+    <rect x="160" y="280" width="45" height="30" rx="2"/>
+    <rect x="215" y="280" width="45" height="30" rx="2"/>
+    <rect x="270" y="280" width="45" height="30" rx="2"/>
+    <rect x="325" y="280" width="45" height="30" rx="2"/>
+    <rect x="380" y="280" width="45" height="30" rx="2"/>
+    <rect x="435" y="280" width="45" height="30" rx="2"/>
+    <rect x="490" y="280" width="45" height="30" rx="2"/>
+    <rect x="545" y="280" width="45" height="30" rx="2"/>
+    <rect x="600" y="280" width="40" height="30" rx="2"/>
+  </g>
+  <circle cx="700" cy="70" r="55" fill="#f59e0b"/>
+</svg>
