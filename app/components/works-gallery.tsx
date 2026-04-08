@@ -204,10 +204,10 @@ export default function WorksGallery({ items }: { items: WorkItem[] }) {
       </div>
 
       <div ref={gridRef} className="grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((item) => (
+        {filtered.map((item, i) => (
           <article
             data-work-card
-            key={item.title}
+            key={i}
             onClick={() => openModal(item)}
             className="group cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-lg"
           >

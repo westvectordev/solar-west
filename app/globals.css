@@ -66,6 +66,10 @@ body {
 }
 
 /* Works gallery sliders */
+.works-slider .swiper-pagination {
+  bottom: 0px;
+}
+
 .works-slider .swiper-pagination-bullet {
   width: 6px;
   height: 6px;
