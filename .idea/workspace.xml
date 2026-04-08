@@ -6,13 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="b7846a29-e432-4b89-a691-4f0cc030dc72" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CLAUDE.md" beforeDir="false" afterPath="$PROJECT_DIR$/CLAUDE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/contact/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/contact/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/contact-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/contact-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/site-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/site-header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/cookie-banner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/cookie-banner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/video-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/video-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/works-gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/works-gallery.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/landing.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/landing.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity/lib/fetch-landing-content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/lib/fetch-landing-content.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity/lib/queries.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/lib/queries.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity/schemaTypes/landingPageType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/schemaTypes/landingPageType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/sync-landing-to-sanity.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sync-landing-to-sanity.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +27,7 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="52" />
+    <option name="cachedIndexableFilesCount" value="64" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -120,6 +122,8 @@
       <workItem from="1775219685635" duration="1221000" />
       <workItem from="1775470283801" duration="245000" />
       <workItem from="1775571069752" duration="6102000" />
+      <workItem from="1775578885501" duration="1210000" />
+      <workItem from="1775628419966" duration="2378000" />
     </task>
     <servers />
   </component>

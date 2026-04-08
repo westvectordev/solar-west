@@ -29,18 +29,28 @@ export async function fetchLandingContent(): Promise<LandingData> {
     return {
       ...fallbackContent,
       ...cmsData,
+      logo: cmsData.logo ?? fallbackContent.logo,
       hero: {
         ...fallbackContent.hero,
         ...cmsData.hero,
         stats: cmsData.hero?.stats ?? fallbackContent.hero.stats,
-        slider: cmsData.hero?.slider ?? fallbackContent.hero.slider,
       },
       navigation: cmsData.navigation ?? fallbackContent.navigation,
       benefits: cmsData.benefits ?? fallbackContent.benefits,
+      about: {
+        ...fallbackContent.about,
+        ...cmsData.about,
+        images: cmsData.about?.images ?? fallbackContent.about.images,
+      },
       services: cmsData.services ?? fallbackContent.services,
+      expertise: {
+        ...fallbackContent.expertise,
+        ...cmsData.expertise,
+        items: cmsData.expertise?.items ?? fallbackContent.expertise.items,
+      },
       process: cmsData.process ?? fallbackContent.process,
-      projects: cmsData.projects ?? fallbackContent.projects,
-      testimonials: cmsData.testimonials ?? fallbackContent.testimonials,
+      portfolioItems: cmsData.portfolioItems ?? fallbackContent.portfolioItems,
+      works: cmsData.works ?? fallbackContent.works,
       faq: cmsData.faq ?? fallbackContent.faq,
       cta: {
         ...fallbackContent.cta,

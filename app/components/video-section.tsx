@@ -90,7 +90,7 @@ export default function VideoSection({ items }: { items: VideoItem[] }) {
             <button
               type="button"
               onClick={close}
-              className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-slate-700 backdrop-blur-sm transition-colors hover:bg-white sm:h-9 sm:w-9"
+              className="absolute right-3 top-3 z-10 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/90 text-slate-700 backdrop-blur-sm transition-colors hover:bg-white sm:h-9 sm:w-9"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </button>

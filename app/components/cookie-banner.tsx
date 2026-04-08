@@ -39,7 +39,7 @@ export default function CookieBanner() {
             type="button"
             aria-label="Закрити банер"
             onClick={closeBanner}
-            className="rounded-full border border-slate-300 px-2 py-1 text-xs font-semibold text-slate-600 hover:border-slate-500"
+            className="cursor-pointer rounded-full border border-slate-300 px-2 py-1 text-xs font-semibold text-slate-600 hover:border-slate-500"
           >
             ✕
           </button>
