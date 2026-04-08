@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b7846a29-e432-4b89-a691-4f0cc030dc72" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +17,7 @@
   <component name="CopilotPersistence">
     <persistenceIdMap>
       <entry key="_D:/courses/empty" value="3BLE5jnkxLNL2P6dH6HFAgdZnt0" />
+      <entry key="_D:/work/solar-west" value="3C4TcDgjbUv51n4gie6HM7FjgRT" />
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
@@ -60,12 +63,13 @@
     &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
     &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
     &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/work/solar-west&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\courses\\empty\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\work\\solar-west\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -115,6 +119,10 @@
       <workItem from="1775571069752" duration="6102000" />
       <workItem from="1775578885501" duration="1210000" />
       <workItem from="1775628419966" duration="2378000" />
+      <workItem from="1775643920942" duration="9000" />
+      <workItem from="1775643940087" duration="272000" />
+      <workItem from="1775651254000" duration="1642000" />
+      <workItem from="1775654788645" duration="321000" />
     </task>
     <servers />
   </component>

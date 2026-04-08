@@ -18,9 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HelioNest Solar | Сонячні Системи Для Будинку Та Бізнесу",
+  title: "West Vector | Сонячні Системи Для Будинку Та Бізнесу",
   description:
-    "HelioNest Solar проєктує та встановлює сонячні електростанції й акумуляторні системи для будинків і бізнесу. Отримайте безкоштовний розрахунок економії.",
+    "West Vector проєктує та встановлює сонячні електростанції й акумуляторні системи для будинків і бізнесу. Отримайте безкоштовний розрахунок економії.",
   keywords: [
     "сонячні панелі",
     "сонячна електростанція",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "solar installation",
   ],
   openGraph: {
-    title: "HelioNest Solar | Сонячні Системи Для Будинку Та Бізнесу",
+    title: "West Vector | Сонячні Системи Для Будинку Та Бізнесу",
     description:
       "Сучасні сонячні та акумуляторні рішення: менші рахунки, резерв під час відключень і швидкий запуск системи.",
     type: "website",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "HelioNest Solar | Сонячні Системи",
+    title: "West Vector | Сонячні Системи",
     description:
       "Проєктування та монтаж сонячних систем і батарей для будинків і бізнесу.",
   },

@@ -213,11 +213,11 @@ export default function WorksGallery({ items }: { items: WorkItem[] }) {
           >
             <div className="relative aspect-[16/10] overflow-hidden">
               <CardSlider images={item.images ?? []} title={item.title} />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-              <span className="pointer-events-none absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[10px] font-bold text-slate-800 backdrop-blur-sm sm:text-xs">
+              <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+              <span className="pointer-events-none absolute left-3 top-3 z-10 rounded-full bg-white/90 px-3 py-1 text-[10px] font-bold text-slate-800 backdrop-blur-sm sm:text-xs">
                 {item.category}
               </span>
-              <div className="pointer-events-none absolute bottom-3 left-3 right-3">
+              <div className="pointer-events-none absolute bottom-3 left-3 right-3 z-10">
                 <p className="text-sm font-bold text-white sm:text-base">{item.title}</p>
               </div>
             </div>

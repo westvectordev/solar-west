@@ -289,12 +289,12 @@ export default async function Home() {
             </a>
             <p>© {new Date().getFullYear()} {data.companyName}. Усі права захищено.</p>
           </div>
-          <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
+          <div className="overflow-hidden border border-slate-200 shadow-sm">
             <iframe
               title="Розташування офісу"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d324.9717729841046!2d25.327093781643903!3d50.753691442940855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472599ed23dce7b5%3A0x5acd76292ad4bc54!2z0J_QnyAi0JLQldCh0KIt0JLQldCa0KLQntCgIg!5e1!3m2!1suk!2sua!4v1775630003234!5m2!1suk!2sua"
               width="100%"
-              height="300"
+              height="152"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
