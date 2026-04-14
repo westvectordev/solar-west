@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7846a29-e432-4b89-a691-4f0cc030dc72" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/icon.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +83,11 @@
         <entry key="com.intellij.reactbuddy.storybook" value="false" />
       </map>
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\work\solar-west\app" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
     <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
