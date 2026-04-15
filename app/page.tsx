@@ -46,13 +46,13 @@ export default async function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 via-slate-900/50 to-slate-900/70" />
           <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6">
             <div className="max-w-2xl text-center text-white">
-              <p className="inline-block rounded-full border border-white/30 bg-white/10 px-3 py-1 text-[10px] font-semibold tracking-[0.16em] backdrop-blur-sm sm:px-4 sm:text-xs sm:tracking-[0.18em]">
+              <p className="inline-block rounded-full border border-white/30 bg-white/10 px-3 whitespace-pre-line py-1 text-[10px] font-semibold tracking-[0.16em] backdrop-blur-sm sm:px-4 sm:text-xs sm:tracking-[0.18em]">
                 {data.tagline}
               </p>
               <h2 className="mt-4 text-2xl font-black tracking-tight sm:mt-5 sm:text-3xl md:text-4xl lg:text-5xl">
                 {data.hero.title}
               </h2>
-              <p className="mt-2 text-sm text-white/85 sm:mt-3 sm:text-base md:text-lg">
+              <p className="mt-2 text-sm text-white/85 sm:mt-3 sm:text-base md:text-lg whitespace-pre-line">
                 {data.hero.description}
               </p>
             </div>
@@ -60,13 +60,13 @@ export default async function Home() {
         </section>
         <section data-gsap="fade-up" className="grid gap-8 py-4 sm:gap-9 sm:py-6 md:grid-cols-[1.2fr_0.8fr] md:items-end md:gap-10 md:py-8">
           <div className="space-y-4 sm:space-y-5 md:space-y-6">
-            <p className="inline-block rounded-full border border-amber-300/70 bg-amber-100/70 px-3 py-1 text-xs font-semibold text-amber-900 sm:px-4 sm:text-sm">
+            <p className="inline-block whitespace-pre-line rounded-full border border-amber-300/70 bg-amber-100/70 px-3 py-1 text-xs font-semibold text-amber-900 sm:px-4 sm:text-sm">
               {data.hero.eyebrow}
             </p>
             <h1 className="max-w-2xl text-3xl font-black leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
               {data.hero.title}
             </h1>
-            <p className="max-w-2xl text-base leading-relaxed text-slate-700 sm:text-lg">
+            <p className="max-w-2xl text-base leading-relaxed text-slate-700 sm:text-lg whitespace-pre-line">
               {data.hero.description}
             </p>
             <div className="flex flex-wrap gap-2 sm:gap-3">
@@ -94,14 +94,14 @@ export default async function Home() {
               className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5 md:p-6"
             >
               <h2 className="text-lg font-bold tracking-tight sm:text-xl">{benefit.title}</h2>
-              <p className="mt-2 text-sm text-slate-700 sm:mt-3 sm:text-base">{benefit.description}</p>
+              <p className="mt-2 text-sm text-slate-700 sm:mt-3 sm:text-base whitespace-pre-line">{benefit.description}</p>
             </article>
           ))}
         </section>
         <section data-gsap="fade-up" id="about" className="grid items-center gap-6 sm:gap-8 md:grid-cols-2">
           <div className="space-y-3 sm:space-y-4">
             <h2 className="text-2xl font-black tracking-tight sm:text-3xl">{data.about.title}</h2>
-            <p className="text-sm leading-relaxed text-slate-700 sm:text-base">{data.about.description}</p>
+            <p className="text-sm leading-relaxed text-slate-700 sm:text-base whitespace-pre-line">{data.about.description}</p>
           </div>
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
             {data.about.images.map((src: string, i: number) => (
@@ -127,18 +127,18 @@ export default async function Home() {
                 className="rounded-2xl border border-emerald-100 bg-emerald-50/60 p-4 sm:p-5 md:p-6"
               >
                 <h3 className="text-base font-bold sm:text-lg">{service.title}</h3>
-                <p className="mt-2 text-sm text-slate-700 sm:text-base">{service.description}</p>
+                <p className="mt-2 text-sm text-slate-700 sm:text-base whitespace-pre-line">{service.description}</p>
               </article>
             ))}
           </div>
         </section>
         <section data-gsap="fade-up" className="rounded-2xl border border-emerald-200 bg-emerald-50/50 p-5 sm:p-7 md:p-8">
           <div className="max-w-3xl">
-            <p className="inline-block rounded-full bg-emerald-700 px-3 py-1 text-[10px] font-bold tracking-widest text-white sm:text-xs">
+            <p className="inline-block rounded-full whitespace-pre-line bg-emerald-700 px-3 py-1 text-[10px] font-bold tracking-widest text-white sm:text-xs">
               ВІД 15 КВТ
             </p>
             <h2 className="mt-3 text-2xl font-black tracking-tight sm:text-3xl">{data.expertise.title}</h2>
-            <p className="mt-2 text-sm text-slate-700 sm:text-base">{data.expertise.description}</p>
+            <p className="mt-2 text-sm text-slate-700 sm:text-base whitespace-pre-line">{data.expertise.description}</p>
           </div>
           <ul className="mt-5 grid gap-2.5 sm:mt-6 sm:gap-3 md:grid-cols-2">
             {data.expertise.items.map((item: string) => (
@@ -158,11 +158,11 @@ export default async function Home() {
                 key={item.step}
                 className="rounded-2xl border border-amber-200 bg-amber-50/80 p-4 sm:p-5"
               >
-                <p className="text-[10px] font-black tracking-[0.18em] text-amber-800 sm:text-xs sm:tracking-[0.2em]">
+                <p className="text-[10px] font-black tracking-[0.18em] text-amber-800 sm:text-xs sm:tracking-[0.2em] whitespace-pre-line">
                   КРОК {item.step}
                 </p>
                 <h3 className="mt-2 text-base font-bold sm:text-lg">{item.title}</h3>
-                <p className="mt-2 text-xs text-slate-700 sm:text-sm">{item.description}</p>
+                <p className="mt-2 text-xs text-slate-700 sm:text-sm whitespace-pre-line">{item.description}</p>
               </article>
             ))}
           </div>
@@ -244,7 +244,7 @@ export default async function Home() {
         <section id="projects" className="space-y-4 sm:space-y-5 md:space-y-6">
           <div>
             <h2 className="text-2xl font-black tracking-tight sm:text-3xl">Наші Роботи</h2>
-            <p className="mt-2 max-w-2xl text-sm text-slate-600 sm:text-base">
+            <p className="mt-2 max-w-2xl text-sm text-slate-600 sm:text-base whitespace-pre-line">
               Реальні проєкти, які ми реалізували для наших клієнтів по всій Україні.
             </p>
           </div>
@@ -266,7 +266,7 @@ export default async function Home() {
           className="rounded-2xl border border-emerald-300 bg-emerald-700 px-4 py-6 text-white sm:px-6 sm:py-8 md:rounded-3xl md:px-8 md:py-10"
         >
           <h2 className="text-2xl font-black tracking-tight sm:text-3xl">{data.cta.title}</h2>
-          <p className="mt-2 max-w-2xl text-sm text-emerald-100 sm:mt-3 sm:text-base">{data.cta.description}</p>
+          <p className="mt-2 max-w-2xl text-sm text-emerald-100 sm:mt-3 sm:text-base whitespace-pre-line">{data.cta.description}</p>
           <div className="mt-6 rounded-2xl border border-white/20 bg-white/8 p-4 sm:mt-7 sm:p-5 md:mt-8 md:p-6">
             <h3 className="text-lg font-bold sm:text-xl">Надішліть нам ваші дані</h3>
             <p className="mt-2 text-xs text-emerald-100 sm:text-sm">
