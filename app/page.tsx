@@ -98,25 +98,25 @@ export default async function Home() {
             </article>
           ))}
         </section>
-        {/*<section data-gsap="fade-up" id="about" className="grid items-center gap-6 sm:gap-8 md:grid-cols-2">*/}
-        {/*  <div className="space-y-3 sm:space-y-4">*/}
-        {/*    <h2 className="text-2xl font-black tracking-tight sm:text-3xl">{data.about.title}</h2>*/}
-        {/*    <p className="text-sm leading-relaxed text-slate-700 sm:text-base">{data.about.description}</p>*/}
-        {/*  </div>*/}
-        {/*  <div className="grid grid-cols-2 gap-3 sm:gap-4">*/}
-        {/*    {data.about.images.map((src: string, i: number) => (*/}
-        {/*      <div key={src} className={`relative overflow-hidden rounded-2xl ${i === 0 ? "aspect-[4/5]" : "aspect-[4/5] translate-y-4 sm:translate-y-6"}`}>*/}
-        {/*        <Image*/}
-        {/*          src={src}*/}
-        {/*          alt={`${data.about.title} ${i + 1}`}*/}
-        {/*          fill*/}
-        {/*          sizes="(max-width: 768px) 50vw, 25vw"*/}
-        {/*          className="object-cover"*/}
-        {/*        />*/}
-        {/*      </div>*/}
-        {/*    ))}*/}
-        {/*  </div>*/}
-        {/*</section>*/}
+        <section data-gsap="fade-up" id="about" className="grid items-center gap-6 sm:gap-8 md:grid-cols-2">
+          <div className="space-y-3 sm:space-y-4">
+            <h2 className="text-2xl font-black tracking-tight sm:text-3xl">{data.about.title}</h2>
+            <p className="text-sm leading-relaxed text-slate-700 sm:text-base">{data.about.description}</p>
+          </div>
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
+            {data.about.images.map((src: string, i: number) => (
+              <div key={src} className={`relative overflow-hidden rounded-2xl ${i === 0 ? "aspect-[4/5]" : "aspect-[4/5] translate-y-4 sm:translate-y-6"}`}>
+                <Image
+                  src={src}
+                  alt={`${data.about.title} ${i + 1}`}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
         <section id="services" className="space-y-4 sm:space-y-5 md:space-y-6">
           <h2 className="text-2xl font-black tracking-tight sm:text-3xl">Послуги</h2>
           <div className="grid gap-3 sm:gap-4 md:grid-cols-2">
