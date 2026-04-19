@@ -105,7 +105,7 @@ export default async function Home() {
           </div>
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
             {data.about.images.map((src: string, i: number) => (
-              <div key={src} className={`relative overflow-hidden rounded-2xl ${i === 0 ? "aspect-[4/5]" : "aspect-[4/5] translate-y-4 sm:translate-y-6"}`}>
+              <div key={src} className={`relative overflow-hidden rounded-2xl ${(i === 0 || i === 2) ? "aspect-[4/5]" : "aspect-[4/5] translate-y-4 sm:translate-y-6"}`}>
                 <Image
                   src={src}
                   alt={`${data.about.title} ${i + 1}`}
