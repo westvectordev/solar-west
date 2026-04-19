@@ -42,6 +42,9 @@ export const metadata: Metadata = {
     description:
       "Проєктування та монтаж сонячних систем і батарей для будинків і бізнесу.",
   },
+  verification: {
+    google: "rA0VlmQUalXXRme9R9OZNFjdM3aOvKKNqesVfheUvR8",
+  },
 };
 
 export default function RootLayout({
