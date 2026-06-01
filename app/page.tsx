@@ -50,7 +50,7 @@ export default async function Home() {
                 {data.tagline}
               </p>
               <h2 className="mt-4 text-2xl font-black tracking-tight sm:mt-5 sm:text-3xl md:text-4xl lg:text-5xl">
-                {data.hero.title}
+                Сонячні системи
               </h2>
               <p className="mt-2 text-sm text-white/85 sm:mt-3 sm:text-base md:text-lg whitespace-pre-line">
                 {data.hero.description}
