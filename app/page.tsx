@@ -49,9 +49,9 @@ export default async function Home() {
               <p className="inline-block rounded-full border border-white/30 bg-white/10 px-3 whitespace-pre-line py-1 text-[10px] font-semibold tracking-[0.16em] backdrop-blur-sm sm:px-4 sm:text-xs sm:tracking-[0.18em]">
                 {data.tagline}
               </p>
-              <h2 className="mt-4 text-2xl font-black tracking-tight sm:mt-5 sm:text-3xl md:text-4xl lg:text-5xl">
-                Сонячні системи
-              </h2>
+              <h1 className="mt-4 text-2xl font-black tracking-tight sm:mt-5 sm:text-3xl md:text-4xl lg:text-5xl">
+                Cонячні панелі
+              </h1>
               <p className="mt-2 text-sm text-white/85 sm:mt-3 sm:text-base md:text-lg whitespace-pre-line">
                 {data.hero.description}
               </p>
@@ -63,9 +63,9 @@ export default async function Home() {
             <p className="inline-block whitespace-pre-line rounded-full border border-amber-300/70 bg-amber-100/70 px-3 py-1 text-xs font-semibold text-amber-900 sm:px-4 sm:text-sm">
               {data.hero.eyebrow}
             </p>
-            <h1 className="max-w-2xl text-3xl font-black leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+            <h2 className="max-w-2xl text-3xl font-black leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
               {data.hero.title}
-            </h1>
+            </h2>
             <p className="max-w-2xl text-base leading-relaxed text-slate-700 sm:text-lg whitespace-pre-line">
               {data.hero.description}
             </p>
