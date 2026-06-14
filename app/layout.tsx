@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "West Vector | Сонячні системи у Луцьку — монтаж для дому та бізнесу",
+  title: "West Vector | Сонячні панелі у Луцьку — монтаж для дому та бізнесу",
   description:
     "West Vector — монтаж сонячних панелей і акумуляторних систем у Луцьку та Волинській області. Від 15 кВт. Безкоштовний розрахунок економії.",
   keywords: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     canonical: "https://west-vector.com.ua",
   },
   openGraph: {
-    title: "West Vector | Сонячні системи у Луцьку — монтаж для дому та бізнесу",
+    title: "West Vector | Сонячні панелі у Луцьку — монтаж для дому та бізнесу",
     description:
       "Монтаж сонячних панелей і акумуляторних систем у Луцьку та Волинській області. Менші рахунки, резерв під час відключень, швидкий запуск.",
     type: "website",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "West Vector | Сонячні системи у Луцьку",
+    title: "West Vector | Сонячні панелі у Луцьку",
     description:
       "Монтаж сонячних панелей і акумуляторних систем у Луцьку та Волинській області.",
   },
