@@ -10,8 +10,24 @@ import Image from "next/image";
 export default async function Home() {
   const data = await fetchLandingContent();
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: data.faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
+  };
+
   return (
     <div className="relative overflow-x-clip bg-[linear-gradient(180deg,#fff7e6_0%,#f4f7f0_45%,#f8fcff_100%)] text-slate-900">
+      {data.faq.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <FunAnimations />
       <div className="pointer-events-none absolute inset-x-0 -top-28 h-80 bg-[radial-gradient(circle_at_top,#facc15_0%,rgba(250,204,21,0)_60%)]" />
       <div className="pointer-events-none absolute -right-32 top-[24rem] h-72 w-72 rounded-full bg-emerald-200/35 blur-3xl" />
@@ -50,7 +66,7 @@ export default async function Home() {
                 {data.tagline}
               </p>
               <h1 className="mt-4 text-2xl font-black tracking-tight sm:mt-5 sm:text-3xl md:text-4xl lg:text-5xl">
-                Cонячні панелі
+                Сонячні панелі та СЕС у Луцьку
               </h1>
               <p className="mt-2 text-sm text-white/85 sm:mt-3 sm:text-base md:text-lg whitespace-pre-line">
                 {data.hero.description}
@@ -133,7 +149,7 @@ export default async function Home() {
           </div>
         </section>
         <section data-gsap="fade-up" className="rounded-2xl border border-emerald-200 bg-emerald-50/50 p-5 sm:p-7 md:p-8">
-          <div className="max-w-3xl">
+          <div className="">
             <p className="inline-block rounded-full whitespace-pre-line bg-emerald-700 px-3 py-1 text-[10px] font-bold tracking-widest text-white sm:text-xs">
               ВІД 15 КВТ
             </p>
@@ -167,55 +183,59 @@ export default async function Home() {
             ))}
           </div>
         </section>
-        {/*<section data-gsap="fade-up" id="portfolio" className="space-y-5 sm:space-y-6 md:space-y-8">*/}
-        {/*  <div>*/}
-        {/*    <p className="inline-block rounded-full border border-emerald-300/70 bg-emerald-100/70 px-3 py-1 text-xs font-semibold text-emerald-900 sm:px-4 sm:text-sm">*/}
-        {/*      У нашому портфоліо*/}
-        {/*    </p>*/}
-        {/*    <h2 className="mt-3 text-2xl font-black tracking-tight sm:text-3xl">Наші досягнення</h2>*/}
-        {/*  </div>*/}
-        {/*  <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">*/}
-        {/*    {data.portfolioItems.map((item) => {*/}
-        {/*      const iconPaths: Record<string, string> = {*/}
-        {/*        lightning: "M13 10V3L4 14h7v7l9-11h-7z",*/}
-        {/*        globe: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064",*/}
-        {/*        bulb: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",*/}
-        {/*        settings: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z",*/}
-        {/*        building: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 00-1-1h-2a1 1 0 00-1 1v5m4 0H9",*/}
-        {/*        document: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",*/}
-        {/*      };*/}
-        {/*      const svgPath = iconPaths[item.icon] ?? iconPaths.lightning;*/}
-        {/*      return (*/}
-        {/*        <article*/}
-        {/*          key={item.label}*/}
-        {/*          className="group flex flex-col gap-3 rounded-2xl border border-slate-100 bg-white p-5 transition-colors hover:border-emerald-200 hover:bg-emerald-50/40 sm:p-6"*/}
-        {/*        >*/}
-        {/*          {item.image ? (*/}
-        {/*            <div className="relative h-28 w-full overflow-hidden rounded-xl">*/}
-        {/*              <Image src={item.image} alt={item.label} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" />*/}
-        {/*            </div>*/}
-        {/*          ) : (*/}
-        {/*            <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-emerald-200 bg-emerald-50">*/}
-        {/*              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#047857" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">*/}
-        {/*                <path d={svgPath} />*/}
-        {/*              </svg>*/}
-        {/*            </div>*/}
-        {/*          )}*/}
-        {/*          {item.stat && (*/}
-        {/*            <p className="text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">*/}
-        {/*              {item.stat}*/}
-        {/*              <span className="ml-0.5 text-base font-semibold text-emerald-700"> ✓</span>*/}
-        {/*            </p>*/}
-        {/*          )}*/}
-        {/*          <div>*/}
-        {/*            <h3 className="text-sm font-semibold leading-snug text-slate-900 sm:text-base">{item.label}</h3>*/}
-        {/*            <p className="mt-1 text-xs leading-relaxed text-slate-500 sm:text-sm">{item.sub}</p>*/}
-        {/*          </div>*/}
-        {/*        </article>*/}
-        {/*      );*/}
-        {/*    })}*/}
-        {/*  </div>*/}
-        {/*</section>*/}
+        <section data-gsap="fade-up" id="portfolio" className="space-y-5 sm:space-y-6 md:space-y-8">
+          <div>
+            <p className="inline-block rounded-full border border-emerald-300/70 bg-emerald-100/70 px-3 py-1 text-xs font-semibold text-emerald-900 sm:px-4 sm:text-sm">
+              У нашому портфоліо
+            </p>
+            <h2 className="mt-3 text-2xl font-black tracking-tight sm:text-3xl">Наші досягнення</h2>
+            <p className="mt-2 text-sm text-slate-600 sm:text-base">
+              West Vector (ПП «ВЕСТ-ВЕКТОР») працює на ринку електромонтажу з 2004 року. За цей час ми
+              виконали повний спектр електротехнічних робіт у Луцьку та на Волині.
+            </p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
+            {data.portfolioItems.map((item) => {
+              const iconPaths: Record<string, string> = {
+                lightning: "M13 10V3L4 14h7v7l9-11h-7z",
+                globe: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064",
+                bulb: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
+                settings: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z",
+                building: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 00-1-1h-2a1 1 0 00-1 1v5m4 0H9",
+                document: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+              };
+              const svgPath = iconPaths[item.icon] ?? iconPaths.lightning;
+              return (
+                <article
+                  key={item.label}
+                  className="group flex flex-col gap-3 rounded-2xl border border-slate-100 bg-white p-5 transition-colors hover:border-emerald-200 hover:bg-emerald-50/40 sm:p-6"
+                >
+                  {item.image ? (
+                    <div className="relative h-28 w-full overflow-hidden rounded-xl">
+                      <Image src={item.image} alt={item.label} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" />
+                    </div>
+                  ) : (
+                    <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-emerald-200 bg-emerald-50">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#047857" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d={svgPath} />
+                      </svg>
+                    </div>
+                  )}
+                  {item.stat && (
+                    <p className="text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">
+                      {item.stat}
+                      <span className="ml-0.5 text-base font-semibold text-emerald-700"> ✓</span>
+                    </p>
+                  )}
+                  <div>
+                    <h3 className="text-sm font-semibold leading-snug text-slate-900 sm:text-base">{item.label}</h3>
+                    <p className="mt-1 text-xs leading-relaxed text-slate-500 sm:text-sm">{item.sub}</p>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </section>
         {/*<section className="grid gap-3 sm:gap-4 md:grid-cols-2">*/}
         {/*  {data.testimonials.map((item) => (*/}
         {/*    <blockquote*/}
@@ -244,8 +264,8 @@ export default async function Home() {
         <section id="projects" className="space-y-4 sm:space-y-5 md:space-y-6">
           <div>
             <h2 className="text-2xl font-black tracking-tight sm:text-3xl">Наші Роботи</h2>
-            <p className="mt-2 max-w-2xl text-sm text-slate-600 sm:text-base whitespace-pre-line">
-              Реальні проєкти, які ми реалізували для наших клієнтів по всій Україні.
+            <p className="mt-2 text-sm text-slate-600 sm:text-base whitespace-pre-line">
+              Реальні проєкти СЕС, які ми реалізували для клієнтів у Луцьку та по всій Волинській області.
             </p>
           </div>
           <WorksGallery items={data.works} />

@@ -39,7 +39,6 @@ export async function POST(request: Request) {
     const gmailUser = getEnv('GMAIL_USER');
     const gmailAppPassword = getEnv('GMAIL_APP_PASSWORD');
     const contactTo = getEnv('CONTACT_TO') || gmailUser;
-    console.log(gmailUser, gmailAppPassword, contactTo);
 
     if (!gmailUser || !gmailAppPassword || !contactTo) {
       return NextResponse.json(
@@ -60,7 +59,7 @@ export async function POST(request: Request) {
     });
 
     await transporter.sendMail({
-      from: `HelioNest Website <${gmailUser}>`,
+      from: `West Vector Website <${gmailUser}>`,
       to: contactTo,
       replyTo: email,
       subject: `Нова заявка на сонячну систему від ${name}`,

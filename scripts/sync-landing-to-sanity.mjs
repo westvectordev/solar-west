@@ -36,6 +36,20 @@ async function main() {
 
   const landing = JSON.parse(await readFile(path.join(cwd, "content", "landing.json"), "utf8"));
 
+  // SAFETY GUARD: this script does a full createOrReplace and only re-uploads images
+  // whose paths start with "/" (local /public assets). If content/landing.json holds
+  // remote Sanity CDN URLs (e.g. after `pull-landing-from-sanity.mjs`), a replace would
+  // DROP every image from the live document. Refuse to run in that case.
+  const asText = JSON.stringify(landing);
+  if (asText.includes("cdn.sanity.io") && !process.argv.includes("--force")) {
+    throw new Error(
+      "content/landing.json contains remote Sanity CDN image URLs. A full replace would\n" +
+        "delete those images from the live document. This JSON is a display fallback pulled\n" +
+        "FROM Sanity — edit content in Sanity Studio (or via scripts/patch), not by pushing it back.\n" +
+        "Re-run with --force only if you have re-pointed every image to a local /public path."
+    );
+  }
+
   async function uploadImage(publicPath, fallbackName) {
     if (!publicPath || !publicPath.startsWith("/")) return undefined;
     const absPath = path.join(cwd, "public", publicPath.replace(/^\//, ""));
